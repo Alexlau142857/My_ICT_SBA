@@ -1,4 +1,4 @@
-// Run and test this code with C++20 standard
+// Run this code with C++20 standard
 #include <cassert>
 #include <cctype>
 #include <cerrno>
@@ -107,16 +107,15 @@ std::vector<account> A;
 bool is_admin = false;
 bool flag = false;
 
-// Helper: validate user id (non-empty, no spaces)
 bool is_valid_id(const std::string &id) {
     if (id.empty()) return false;
     for (unsigned char ch : id) {
-        if (std::isspace(ch)) return false;
-    }
-    return true;
+        if (std::isspace(ch)) {
+            return false;
+        }
+    }return true;
 }
 
-// Helper: validate password (8-16 chars, at least one upper, lower, digit)
 bool is_valid_password(const std::string &pw) {
     std::size_t n = pw.length();
     if (n < 8 || n > 16) return false;
@@ -129,14 +128,12 @@ bool is_valid_password(const std::string &pw) {
     return up && low && num;
 }
 
-// Helper: check whether an account id exists in a file (e.g., account.txt)
 bool account_exists_in_file(const std::string &filename, const std::string &id) {
     std::ifstream fin(filename);
     std::string line;
     while (std::getline(fin, line)) {
         if (line.find(id) != std::string::npos) return true;
-    }
-    return false;
+    }return false;
 }
 
 void clrscr() {
@@ -229,14 +226,25 @@ void create(account &user, bool &flag) {
         flag = false;
         return;
     }
-    for (ll i = 0; i < (ll)A.size(); i++){
-        if (A[i].id == user.id) {
-            std::cout << "The user ID is already in use! You will be directed to the front page." << std::endl;
-            flag = false;
-            return;
+    ll l = 0, r = (ll)A.size() - 1;
+    bool found = false;
+    while (l <= r) {
+        ll mid = (l + r) / 2;
+        if (A[mid].id == user.id) {
+            found = true;
+            break;
+        } else if (A[mid].id < user.id) {
+            l = mid + 1;
+        } else {
+            r = mid - 1;
         }
     }
-
+    if (found) {
+        std::cout << "The user ID is already in use! You will be directed to the front page." << std::endl;
+        flag = false;
+        return;
+        }
+    }
     if (!is_valid_password(user.pw)) {
         std::cout << "Register failed, your password is weak! Please enter your password again." << std::endl;
         while (true) {
