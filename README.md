@@ -12,4 +12,4 @@
 
  - add function (admin account can output all the account id and password to "account.txt" file
 
-   
+ - debug: when the password is invaild, input the password again the program will check the password is vaild or not again
