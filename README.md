@@ -7,10 +7,14 @@
  - try to use SQL file to store the account data(?)
 
  - other...
+
+ ---
    
  > 2026.02.03
 
  - Already wrote a login system demo
+
+ ---
 
  > 2026.02.05
 
@@ -24,6 +28,8 @@
 
  - Other debugging and improvement...
 
+ ---
+
  > 2026.02.06
 
  - add function (admin can insert account from txt file)
@@ -34,10 +40,14 @@
 
  - Other debugging and improvement...
 
+ ---
+ 
  > 2026.02.07 (early morning)
 
  - rewrite the structure of the whole code
 
  - mordulize many function
+
+ ---
 
  - Other debugging and improvement...
