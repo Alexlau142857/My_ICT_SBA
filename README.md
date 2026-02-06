@@ -1,6 +1,8 @@
 # ICT_SBA
 
- > ***TODO*** :
+ ***TODO*** :
+
+ - haven not decided the topic and use of the system
 
  - try to use SQL file to store the account data(?)
 
@@ -32,4 +34,10 @@
 
  - Other debugging and improvement...
 
+ > 2026.02.07 (early morning)
 
+ - rewrite the structure of the whole code
+
+ - mordulize many function
+
+ - Other debugging and improvement...
