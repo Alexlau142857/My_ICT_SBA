@@ -1,5 +1,11 @@
 # ICT_SBA
 
+ > ***TODO*** :
+
+ - try to use SQL file to store the account data(?)
+
+ - other...
+   
  > 2026.02.03
 
  - Already wrote a login system demo
@@ -26,8 +32,4 @@
 
  - Other debugging and improvement...
 
- > TODO :
 
- - try to use SQL file to store the account data(?)
-
- - other...
