@@ -16,3 +16,12 @@
 
  - Other debugging and improvement...
 
+ > 2026.02.06
+
+ - add function (admin can insert account from txt file)
+
+ - change the data type of account array from array -> std::vector > std::map
+
+ - add function (admin can delete the account)
+
+ - Other debugging and improvement...
