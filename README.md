@@ -4,6 +4,10 @@
 
  - haven not decided the topic and use of the system
 
+ - make the login system better
+
+ - when the user input the paaword, the password will be instead by '*'
+
  - try to use SQL file to store the account data(?)
 
  - other...
