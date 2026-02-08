@@ -6,8 +6,6 @@
 
 * Use database (SQL) to store account data
 
-* Implement Input Sanitization (prevent SQL injection)
-
 * Create Audit Log (log.txt)
 
 * Define Role Hierarchy (Admin, Moderator, User)
